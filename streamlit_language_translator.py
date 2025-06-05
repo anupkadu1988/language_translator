@@ -9,7 +9,8 @@ load_dotenv()
 
 ## Build a model
 groq_api_key=os.getenv("GROQ_API_KEY")
-groq_model=ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=groq_api_key)
+os.environ["GROQ_API_KEY"]=groq_api_key
+groq_model=ChatGroq(model="llama-3.3-70b-versatile")
 
 ## Prompt
 gen_message="Translate given input in language {language}"
