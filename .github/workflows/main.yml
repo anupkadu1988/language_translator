@@ -17,5 +17,6 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git pull https://anup1988:$HF_TOKEN@huggingface.co/spaces/anup1988/language_translator main --rebase
-        run: git push https://anup1988:$HF_TOKEN@huggingface.co/spaces/anup1988/language_translator main
+        run: |
+          git pull https://anup1988:$HF_TOKEN@huggingface.co/spaces/anup1988/language_translator main --rebase
+          git push https://anup1988:$HF_TOKEN@huggingface.co/spaces/anup1988/language_translator main
