@@ -28,7 +28,9 @@ st.title("language translator")
 target_language=st.text_input("Mention your target language here")
 query=st.text_input("Mention query to translate here")
 
+## run
 if st.button('translate'):
     response=chain.invoke({"language":target_language,"query":query})
     st.write(response)
+
 
